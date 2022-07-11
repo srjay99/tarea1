@@ -2,72 +2,124 @@
     margin: 0;
     padding: 0;
     background-image: url(../img/7845.jpg);
-    height: 800px;
+    height: auto;
     width: 100%;
     background-position: center;
 }
 
-.img{
+.left .img{
     background-image: url(../img/5155589_2710477.jpg);
     height: 393px;
-    width: 100%;
-    margin: -421px;
+    width: 50%;
+    margin: auto 0 0 0;
 }
 
-#container{
-    margin: 140px 524px;
-    background-color: #ffffff;
-    border-radius: 20px;
-}
-
-.contenedor{
+.center{
     margin: 0 0 0 50%;
-    padding: 30px;
+    padding: 75px;
     border-radius: 10px;
 }
 
-.contenedor h2{
-    margin: 60px 0 30px;
-    padding: 0;
+.center h2{
+    margin: auto;
+    padding: 0 0 15px 0;
     font-size: 40px;
     color: #131313;
-    text-align: left;
+    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.contenedor .elemento input{
-    width: 100%;
-    padding: 10px 0;
-    color: #131313;
-    background: #d3d3d3d0;
-    border: none;
-    margin-bottom: 10px;
-    border-radius: 100px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.center .elemento input{
+  width: 40%;
+  padding: 10px 0;
+  color: #131313;
+  background: #d3d3d3d0;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.contenedor .elemento input[type="submit"]{
+.center .elemento input[type="submit"]{
     background-color: #008dff;
     border: none;
     cursor: pointer;
     padding: 15px;
     margin: 30px 0 120px 0;
     border-radius: 10px;
+    color: white;
 }
 
-.contenedor .elemento input[type="submit"]:hover{
+.center .elemento input[type="submit"]:hover{
     background-color: #04579b;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
 #comentario{
-    width: 100%;
-    padding: 0px 0;
-    color: #020202;
-    background-color: #d3d3d383;
-    border: none;
-    margin-bottom: -5px;
-    border-radius: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 40%;
+  margin: auto;
+  padding: auto;
+  color: #020202;
+  background: #d3d3d383;
+  border: none;
+  margin-bottom: -5px;
+  border-radius: 20px;
+  text-align: left;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  
+  .flexbox>div {
+    text-align: center;
+    padding: 20px 0;
+    margin: 5px;
+  }
+  
+  .flexbox>.left {
+    background-color: #ffffff;
+  }
+  
+  .flexbox>.center {
+    background-color: #ffffff;
+  }
+  
+  
+  @media(min-width:576px) {
+    .flexbox {
+      flex-flow: row wrap;
+    }
+    .flexbox>.left {
+      order: 1;
+      flex: 0.5;
+    }
+
+    .flexbox>.center {
+      order: 2;
+      flex: 0.5;
+    }
+  }
+  
+  @media(min-width:768px) {
+    .flexbox {
+      flex-flow: row nowrap;
+    }
+    .flexbox>div {
+      width: 33.33% !important;
+    }
+    .flexbox>.left {
+      order: 1;
+    }
+    .flexbox>.center {
+      order: 2;
+    }
+
+  }
